@@ -1,0 +1,18 @@
+
+legalnews:
+  rss: http://www.avvo.com/news.rss
+  login: avvolegalnews
+  password: secret
+
+cnn_money_top_stories:
+  rss: http://rss.cnn.com/rss/money_topstories.rss
+  login: money_news
+  password: secret
+  max: 5
+
+cnn_money_markets:
+  rss: http://rss.cnn.com/rss/money_markets.rss
+  login: money_news
+  password: secret
+  max: 3
+

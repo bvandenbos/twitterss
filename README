@@ -1,0 +1,59 @@
+= twitterss
+
+bvandenbos@gmail.com 2009
+
+== Description
+
+Twitterss is supposed to be a super simple, lightweight RSS => Twitter script
+that can support multiple feeds to multiple Twitter accounts.  Since Twitter
+is quickly becoming an SEO/marketing tool, it's common to find yourself
+maintaining a lot of content from many different sources.  This allows your
+app to only need to RSS and allow this script to manage the push to Twitter.
+
+
+== Requirements
+
+ * Ruby 1.8.6/7 (probably works with other versions but not tested)
+ * rubygems
+ * A handleful of gems
+ * *nix or OSX.  Windows is not supported (though you might be able to get
+   it to run on Windows).
+
+== Usage
+
+Twitterss is meant to be used as a cron job that runs however often.
+
+   $ ./twitterss twitterrss.yml
+
+== Configuration
+
+Configuration is handled by a YAML file.  If you're unfamiliar with YAML look
+here: http://www.yaml.org/.  Here's an example config file:
+
+legalnews:
+  rss: http://www.avvo.com/news.rss
+  login: avvolegalnews
+  password: secret
+
+cnn_money_top_stories:
+  rss: http://rss.cnn.com/rss/money_topstories.rss
+  login: money_news
+  password: secret
+  max: 5
+
+cnn_money_markets:
+  rss: http://rss.cnn.com/rss/money_markets.rss
+  login: money_news
+  password: secret
+  max: 3
+
+This will tell twitterss maintain two twitter accounts.  Note that you can point
+multiple RSS feeds at the same Twitter account if desired.  In this way you can 
+have your Twitter feeds act as aggregators of multiple sources.  The default
+value for 'max' is 5. 
+
+== Notes
+
+To keep track of posts that have already been sent to Twitter, Twitterrss needs
+to maintain state.  Currently it does this by dumping a file to the home
+directory of the user running the script (.twitterrss_history).
