@@ -15,7 +15,7 @@ app to only need to RSS and allow this script to manage the push to Twitter.
 
  * Ruby 1.8.6/7 (probably works with other versions but not tested)
  * rubygems
- * A handleful of gems
+ * Gems: twitter4r, tinyurl
  * *nix or OSX.  Windows is not supported (though you might be able to get
    it to run on Windows).
 
