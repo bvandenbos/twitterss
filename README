@@ -8,7 +8,8 @@ Twitterss is supposed to be a super simple, lightweight RSS => Twitter script
 that can support multiple feeds to multiple Twitter accounts.  Since Twitter
 is quickly becoming an SEO/marketing tool, it's common to find yourself
 maintaining a lot of content from many different sources.  This allows your
-app to only need to RSS and allow this script to manage the push to Twitter.
+webapp/blog to only support RSS and allow this script to manage the push to
+Twitter.
 
 
 == Requirements
@@ -19,11 +20,13 @@ app to only need to RSS and allow this script to manage the push to Twitter.
  * *nix or OSX.  Windows is not supported (though you might be able to get
    it to run on Windows).
 
+
 == Usage
 
 Twitterss is meant to be used as a cron job that runs however often.
 
    $ ./twitterss twitterrss.yml
+
 
 == Configuration
 
@@ -51,6 +54,7 @@ This will tell twitterss maintain two twitter accounts.  Note that you can point
 multiple RSS feeds at the same Twitter account if desired.  In this way you can 
 have your Twitter feeds act as aggregators of multiple sources.  The default
 value for 'max' is 5. 
+
 
 == Notes
 
