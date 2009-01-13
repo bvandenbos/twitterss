@@ -92,7 +92,7 @@ private
   def generate_message(item)
     tinyurl = get_tinyurl(item.link)
     limit = TWITTER_LIMIT - tinyurl.length
-    message = "#{item.title}: #{item.description}"[0,limit-2] # 2 for '..'
+    message = "#{item.title.strip}: #{item.description.to_s.strip}"[0,limit-2] # 2 for '..'
     message << "..#{tinyurl}"
     message
   end
